@@ -28,7 +28,7 @@ class Work(db.Model):
 
 @app.after_request
 def add_cors_headers(response):
-    response.headers.add("Access-Control-Allow-Origin", "http://localhost:3000")
+    response.headers.add("Access-Control-Allow-Origin", "https://denezhki.onrender.com")
     response.headers.add("Access-Control-Allow-Headers", "Content-Type")
     response.headers.add("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
     response.headers.add("Access-Control-Allow-Credentials", "true")
