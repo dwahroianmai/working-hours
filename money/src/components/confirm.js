@@ -8,7 +8,7 @@ const Confirmation = ({ confirm }) => {
   const [error, setError] = useState("");
 
   function sendPassword() {
-    axios.post("http://127.0.0.1:5000/password", { password }).then((res) => {
+    axios.post("https://prace.fly.dev/password", { password }).then((res) => {
       setConfirmed(res["data"]["confirmed"]);
       setError(res["data"]["error"]);
     });

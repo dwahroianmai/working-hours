@@ -59,7 +59,7 @@ const Form = () => {
       <button
         className=" shadow-circle mt-4 rounded-md bg-green-700 text-slate-50 font-semibold p-2 hover:scale-110 active:scale-75 transition duration-300"
         onClick={() =>
-          axios.post("http://127.0.0.1:5000/data", {
+          axios.post("https://prace.fly.dev/data", {
             time,
             hours,
             job,

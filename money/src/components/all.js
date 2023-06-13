@@ -7,13 +7,13 @@ const Sum = ({ sum }) => {
 
   useEffect(() => {
     axios
-      .post("http://127.0.0.1:5000/rubles", { sum })
+      .post("https://prace.fly.dev/rubles", { sum })
       .then((res) => setRub(res["data"]["rub"]));
   }, [sum]);
 
   useEffect(() => {
     axios
-      .post("http://127.0.0.1:5000/rubles", { sum: 18000 })
+      .post("https://prace.fly.dev/rubles", { sum: 18000 })
       .then((res) => setPrice(res["data"]["rub"]));
   }, []);
 
