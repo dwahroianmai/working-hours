@@ -83,7 +83,7 @@ def rubles():
         rub = int(api_data["result"])
         return {"rub": rub}
     except Exception as e:
-        return f"Something went wrong, /rubles, {e}"
+        return {"error": f"Something went wrong, /rubles, {e}"}
 
 
 @app.route("/password", methods=["POST"])
