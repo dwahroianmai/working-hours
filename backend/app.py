@@ -75,7 +75,7 @@ def rubles():
     try:
         sum = request.json["sum"]
         response = requests.get(
-            f"https://api.apilayer.com/fixer/convert?to=RUB&from=CZK&amount={sum}",
+            f"https://api.apilayer.com/currency_data/convert?to=RUB&from=CZK&amount={sum}",
             headers={"apikey": api_key},
         )
 
