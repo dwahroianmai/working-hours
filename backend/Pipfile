@@ -5,8 +5,6 @@ name = "pypi"
 
 [packages]
 flask = "*"
-werkzeug = "*"
-flask-session = "*"
 flask-sqlalchemy = "*"
 flask-cors = "*"
 psycopg2-binary = "*"
