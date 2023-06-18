@@ -53,7 +53,7 @@ const Form = () => {
             onChange={() => setJob("rohlik-p")}
             className=" w-3 h-3"
           />
-          <label for="rohlik">Rohlik - picking</label>
+          <label for="rohlik-p">Rohlik - picking</label>
         </div>
       </div>
       <button
