@@ -5,6 +5,7 @@ const Form = () => {
   const [time, setTime] = useState("");
   const [hours, setHours] = useState(0);
   const [job, setJob] = useState("");
+  const [sent, setSent] = useState("");
 
   return (
     <div className="flex flex-col items-center gap-5 pt-6 ml-auto mr-auto">
@@ -56,14 +57,17 @@ const Form = () => {
           <label for="rohlik-p">Rohlik - picking</label>
         </div>
       </div>
+      <p>{sent}</p>
       <button
         className=" shadow-circle mt-4 rounded-md bg-green-700 text-slate-50 font-semibold p-2 hover:scale-110 active:scale-75 transition duration-300"
         onClick={() =>
-          axios.post("https://prace.fly.dev/data", {
-            time,
-            hours,
-            job,
-          })
+          axios
+            .post("https://prace.fly.dev/data", {
+              time,
+              hours,
+              job,
+            })
+            .then(() => setSent("Отправлено"))
         }
       >
         Отправить
