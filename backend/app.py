@@ -52,17 +52,17 @@ def money():
     rohlik_money = 0
     rohlik = db.session.query(Work).filter(Work.job == "rohlik")
     for row in rohlik:
-        rohlik_money += 918
+        rohlik_money += 153 * row.hours
     populo_money = 0
     populo = db.session.query(Work).filter(Work.job == "populo")
     for row in populo:
-        populo_money += 144.5
+        populo_money += 144.5 * row.hours
     rohlik_p_money = 0
     rohlik_p = db.session.query(Work).filter(Work.job == "rohlik-p")
     for row in rohlik_p:
-        rohlik_p_money += 1014.9
+        rohlik_p_money += 170 * row.hours
     all = rohlik_money + populo_money + rohlik_p_money
-    return {"money": all}
+    return {"money": all, "picking": rohlik_p_money}
 
 
 @app.route("/rubles", methods=["POST"])
